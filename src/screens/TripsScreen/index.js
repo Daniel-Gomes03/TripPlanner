@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
 import MapView from 'react-native-maps';
 
 import Trip from './Trip';
@@ -33,6 +33,16 @@ class TripsScreen extends Component {
                             longitudeDelta: 0.0421,
                         }}
                     />
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('AddTrip')}
+                        style={{
+                            position: "absolute",
+                            bottom: 0,
+                            right: 20,
+                            padding: 10,
+                        }}
+                    >
+                        <Image source={require('../../../assets/add.png')} />
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.wrapperList}>
                     <FlatList 
