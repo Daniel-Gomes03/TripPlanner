@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, FlatList } from 'react-native';
+import MapView from 'react-native-maps';
 
 import Trip from './Trip';
 import styles from './styles';
@@ -23,7 +24,15 @@ class TripsScreen extends Component {
         return (
             <View style={styles.wrapperTripsScreen}>
                 <View style={styles.wrapperMap}>
-                    <Text>Mapa</Text>
+                    <MapView 
+                        style={{flex: 1}}
+                        initialRegion={{
+                            latitude: 37.78825,
+                            longitude: -122.4324,
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421,
+                        }}
+                    />
                 </View>
                 <View style={styles.wrapperList}>
                     <FlatList 

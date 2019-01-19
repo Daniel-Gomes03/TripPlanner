@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
         alignItems: 'stretch'
     },
     wrapperMap: {
-        backgroundColor: 'red',
         flex: 1,
     },
     wrapperList: {
